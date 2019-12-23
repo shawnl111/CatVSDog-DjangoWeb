@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>E21714018-罗先林-猫狗识别</title>
+<link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+<div class="bg"><img src="{% static '/img/background.png' %}" alt=""> </div>
+<div class="header clearfix">
+    <span class="logo"><img src="{% static '/img/ahu.png' %}" alt=""></span>
+    <span class="topname">E21714018-罗先林-猫狗识别</span>
+</div>
+<div id="main">
+    <div id="body" class="light">
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="display_box">
+                <div class="display_main">
+                    <div class="display">
+                        {{ form.as_p }}
+                        <input type="submit" value="确认上传" />
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="picture1">
+    <img src="{% static '/img/cat.jpeg' %}" width="400" height="260" alt="">
+</div>
+
+<div class="picture2">
+    <img src="{% static '/img/dog.jpeg' %}" width="400" height="260"  alt="">
+</div>
+
+
+
+<div class="layer_footer">
+    <span>BY E21714018-罗先林</span>
+    <br />
+    <span>安徽大学计算机科学与技术学院17级软件工程</span>
+    <br />
+    <span>地址：安徽省合肥市蜀山区九龙路111号磬苑校区</span>
+</div>
+
+</body>
+</html>
